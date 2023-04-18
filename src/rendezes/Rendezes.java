@@ -12,6 +12,7 @@ public class Rendezes {
         kiir(tomb);
         rend(tomb, 10);
         rendKiir(tomb);
+        ell(tomb);
     }
     
     static void rend(int array[], int n) {
@@ -53,6 +54,24 @@ public class Rendezes {
             System.out.print(array[i] + ", ");
         }
         System.out.println("");
+    }
+    
+    static void ell(int array[]) {
+        System.out.println("");
+        int x = array[0];
+        boolean hiba = false;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < x) {
+                hiba = true;
+            } else {
+                x = array[i];
+            }
+        }
+        if (hiba) {
+            System.out.println("Nincs rendezve a tömb");
+        } else {
+            System.out.println("Rendezve van a tömb");
+        }
     }
     
 }
